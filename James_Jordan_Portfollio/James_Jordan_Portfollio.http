@@ -1,0 +1,6 @@
+@James_Jordan_Portfollio_HostAddress = http://localhost:5099
+
+GET {{James_Jordan_Portfollio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
