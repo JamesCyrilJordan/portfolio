@@ -30,3 +30,4 @@ C:\Users\James\source\repos\James_Jordan_Portfollio\James_Jordan_Portfollio\obj\
 C:\Users\James\source\repos\James_Jordan_Portfollio\James_Jordan_Portfollio\obj\Debug\net8.0\James_Jordan_Portfollio.pdb
 C:\Users\James\source\repos\James_Jordan_Portfollio\James_Jordan_Portfollio\obj\Debug\net8.0\James_Jordan_Portfollio.genruntimeconfig.cache
 C:\Users\James\source\repos\James_Jordan_Portfollio\James_Jordan_Portfollio\obj\Debug\net8.0\ref\James_Jordan_Portfollio.dll
+C:\Users\James\source\repos\James_Jordan_Portfollio\James_Jordan_Portfollio\obj\Debug\net8.0\James_Jordan_Portfollio.sourcelink.json
