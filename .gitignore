@@ -1,2 +1,100 @@
+# .NET Core Ignore List
+##############################
+## OS-specific files
+##############################
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+##############################
+## Visual Studio and VS Code
+##############################
+.vscode/
+.vs/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.user
+*.tss
+
+##############################
+## Build and Publish Outputs
+##############################
 bin/
 obj/
+out/
+AppPackages/
+Publish/
+node_modules/
+bower_components/
+wwwroot/lib/
+
+##############################
+## Dependencies and Tools
+##############################
+packages/
+project.lock.json
+project.assets.json
+global.json
+.nuget/
+*.nupkg
+*.snupkg
+NuGet.config
+*.pdb
+
+##############################
+## Logs, Database, and Temp Files
+##############################
+*.log
+logs/
+*.ldf
+*.mdf
+*.db-shm
+*.db-wal
+*.sqlite
+dump.rdb
+
+##############################
+## Runtime and User-Specific Files
+##############################
+*.swp
+*.swo
+*.bak
+*.pid
+*.seed
+*.pid.lock
+*.lock
+secrets.json
+.env
+
+##############################
+## Resharper and Rider
+##############################
+*.DotSettings.user
+.idea/
+*.sln.iml
+
+##############################
+## Docker
+##############################
+**/Dockerfile
+**/docker-compose*
+**/.dockerignore
+
+##############################
+## Entity Framework Migrations
+##############################
+Migrations/
+
+##############################
+## IIS and Web Config
+##############################
+*.vspscc
+*.vssscc
+.project/
+config.json
+config*.json
