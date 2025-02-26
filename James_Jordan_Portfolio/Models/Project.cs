@@ -1,4 +1,4 @@
-﻿namespace James_Jordan_Portfollio.Models
+﻿namespace James_Jordan_Portfolio.Models
 {
 	public class Project
 	{

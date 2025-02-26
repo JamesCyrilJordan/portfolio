@@ -1,4 +1,4 @@
-namespace James_Jordan_Portfollio
+namespace James_Jordan_Portfolio
 {
 	public class WeatherForecast
 	{

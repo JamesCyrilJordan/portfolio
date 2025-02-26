@@ -1,7 +1,7 @@
-﻿using James_Jordan_Portfollio.Models;
+﻿using James_Jordan_Portfolio.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace James_Jordan_Portfollio.Data
+namespace James_Jordan_Portfolio.Data
 {
     public class PortfolioDbContext : DbContext
     {
