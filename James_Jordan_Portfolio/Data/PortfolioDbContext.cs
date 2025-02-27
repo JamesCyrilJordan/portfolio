@@ -8,6 +8,6 @@ namespace James_Jordan_Portfolio.Data
         public PortfolioDbContext(DbContextOptions<PortfolioDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<Experience> Experiences { get; set; }
+        //public DbSet<Experience> Experiences { get; set; }
     }
 }

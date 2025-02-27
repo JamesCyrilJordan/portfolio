@@ -2,6 +2,6 @@
 {
 	public class Experience
 	{
-
+		public int Id { get; set; }
 	}
 }
