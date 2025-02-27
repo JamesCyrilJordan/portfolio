@@ -1,12 +1,12 @@
-﻿using Portfolio.Data.Entities;
+﻿using Portfolio.Services.DTOs;
 
 
 namespace Portfolio.Services.Interfaces
 {
     public interface IProjectService
     {
-		Task<IEnumerable<Project>> GetAllProjectsAsync();
-		Task<Project?> GetProjectByIdAsync(int id);
-		Task AddProjectAsync(Project project);
+		Task<IEnumerable<ProjectDto>> GetAllProjectsAsync();
+		Task<ProjectDto?> GetProjectByIdAsync(int id);
+		Task AddProjectAsync(ProjectDto project);
 	}
 }

@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Portfolio.Data.Entities;
 using Portfolio.Services.Interfaces;
+using Portfolio.Services.DTOs;
 
 namespace Portfolio.Web.Controllers
 {
-    public class ProjectController : ControllerBase
+	[ApiController]
+	[Route("api/[controller]")]
+	public class ProjectController : ControllerBase
     {
 		private readonly IProjectService _projectService;
 
@@ -20,11 +22,22 @@ namespace Portfolio.Web.Controllers
 			return Ok(projects);
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> AddProject(Project project)
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetProject(int id)
 		{
-			await _projectService.AddProjectAsync(project);
-			return CreatedAtAction(nameof(GetProjects), new { id = project.Id }, project);
+			var project = await _projectService.GetProjectByIdAsync(id);
+			if (project == null) return NotFound();
+
+			return Ok(project);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> AddProject(ProjectDto projectDto)
+		{
+			if (projectDto == null) return BadRequest("Invalid project data");
+
+			await _projectService.AddProjectAsync(projectDto);
+			return CreatedAtAction(nameof(GetProjects), new { }, projectDto);
 		}
 	}
 }
