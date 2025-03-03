@@ -12,10 +12,11 @@ public static class ServiceExtensions
 {
 	public static IServiceCollection AddPortfolioServices(this IServiceCollection services, IConfiguration configuration)
 	{
-		// Register DbContext
-		services.AddDbContext<PortfolioDbContext>(x =>
-			x.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
-		);
+		services.AddDbContext<PortfolioDbContext>(options =>
+			options.UseSqlServer(
+			configuration.GetConnectionString("DefaultConnection"),
+			sqlOptions => sqlOptions.MigrationsAssembly("Portfolio.Data") // Ensures migrations are generated in Portfolio.Data
+		));
 
 		// Register repositories
 		services.AddScoped<IProjectRepository, ProjectRepository>();

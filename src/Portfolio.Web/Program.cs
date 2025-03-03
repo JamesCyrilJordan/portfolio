@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Register services
-builder.Services.AddPortfolioServices(builder.Configuration);
+builder.Services.AddPortfolioServices(builder.Configuration); // This sets up EF Core via Portfolio.Services
 
 var app = builder.Build();
 
