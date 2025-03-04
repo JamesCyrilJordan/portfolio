@@ -25,6 +25,8 @@ public static class ServiceExtensions
 		// Register services
 		services.AddScoped<IProjectService, ProjectService>();
 		services.AddScoped<IUserService, UserService>();
+		services.AddScoped<DatabaseSeeder>(); // Register DatabaseSeeder
+
 
 		return services;
 
