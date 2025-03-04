@@ -12,8 +12,8 @@ namespace Portfolio.Data.Entities
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		public string Email { get; set; }
-		public string Bio { get; set; }
-		public string ProfilePictureUrl { get; set; }
+		public string? Bio { get; set; }
+		public string? ProfilePictureUrl { get; set; }
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
 		// Navigation properties

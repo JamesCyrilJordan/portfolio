@@ -21,7 +21,6 @@ namespace Portfolio.Services
 			{
 				_context.Users.Add(new User
 				{
-					Id = 1,
 					FirstName = "James",
 					LastName = "Jordan",
 					Email = "james@example.com",
