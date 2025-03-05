@@ -10,25 +10,18 @@ namespace Portfolio.Data
 		{
 		}
 
-		public DbSet<User> Users { get; set; }
 		public DbSet<Project> Projects { get; set; }
-		public DbSet<Experience> Experiences { get; set; }
+		public DbSet<Position> Positions { get; set; }
+		public DbSet<Responsibility> Responsibilities { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
 
-			// User-Project Relationship
-			modelBuilder.Entity<Project>()
-				.HasOne(p => p.User)
-				.WithMany(u => u.Projects)
-				.HasForeignKey(p => p.UserId)
-				.OnDelete(DeleteBehavior.Cascade);
-
-			modelBuilder.Entity<Experience>()
-				.HasOne(e => e.User)
-				.WithMany(u => u.Experiences)
-				.HasForeignKey(p => p.UserId)
+			modelBuilder.Entity<Responsibility>()
+				.HasOne(p => p.Position)
+				.WithMany(r => r.Responsibilities)
+				.HasForeignKey(x => x.PositionId)
 				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}

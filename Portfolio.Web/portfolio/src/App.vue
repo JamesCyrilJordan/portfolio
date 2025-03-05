@@ -1,5 +1,4 @@
 <template>
-	
 	<div class="app">
 		<NavBar />
 		<router-view></router-view>

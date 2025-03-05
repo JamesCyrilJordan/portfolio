@@ -20,11 +20,10 @@ public static class ServiceExtensions
 
 		// Register repositories
 		services.AddScoped<IProjectRepository, ProjectRepository>();
-		services.AddScoped<IUserRepository, UserRepository>();
 
 		// Register services
 		services.AddScoped<IProjectService, ProjectService>();
-		services.AddScoped<IUserService, UserService>();
+
 		services.AddScoped<DatabaseSeeder>(); // Register DatabaseSeeder
 
 
