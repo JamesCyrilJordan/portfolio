@@ -1,0 +1,10 @@
+<template>
+	<h1> Bio page (under construction)</h1>
+
+</template>
+
+<script>
+	export default {
+		name: 'BioPage',
+	}
+</script>
