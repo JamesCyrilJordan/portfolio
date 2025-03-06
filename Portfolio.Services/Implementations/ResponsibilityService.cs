@@ -6,20 +6,21 @@ namespace Portfolio.Services.Implementations
 {
 	public class ResponsibilityService : IResponsibilityService
 	{
-		private readonly ResponsibilityRepository _repo;
+		private readonly IResponsibilityRepository _repo;
 
-		public ResponsibilityService(ResponsibilityRepository repo)
+		public ResponsibilityService(IResponsibilityRepository repo)
 		{
 			_repo = repo;
 		}
 		public async Task<IEnumerable<ResponsibilityDto>> GetResponsibilitiesByPositionId(int positionId)
 		{
 			var responsibilities = await _repo.GetResponsibilitiesByPositionId(positionId);
-			//return new ResponsibilityDto
-			//{
-			//	Description = responsibilities
-			//}.To;
-			throw new NotImplementedException();
+			return responsibilities.Select(r => new ResponsibilityDto
+			{
+				Description = r.Description,
+				Id = r.Id,
+				PositionId = r.PositionId
+			});
 		}
 	}
 }

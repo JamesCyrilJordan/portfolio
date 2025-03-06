@@ -7,5 +7,7 @@
 		public required string Company { get; set; }
 		public DateTime StartDate { get; set; }
 		public DateTime EndDate { get; set; }
+
+		public ICollection<ResponsibilityDto> Responsibilities { get; set; } = new List<ResponsibilityDto>();
 	}
 }
