@@ -1,6 +1,5 @@
 ﻿using Portfolio.Services.DTOs;
 
-
 namespace Portfolio.Services.Interfaces
 {
     public interface IProjectService

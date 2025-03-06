@@ -144,6 +144,7 @@ namespace Portfolio.Services
 						PositionId = position.Id
 					}
 				);
+				_context.SaveChanges();
 			}
 		}
 	}

@@ -2,7 +2,7 @@
 
 namespace Portfolio.Data.Repositories
 {
-	public interface IProjectRepository : IBaseRepository<Project>
+	public interface IPositionRepository : IBaseRepository<Position>
 	{
 	}
 }

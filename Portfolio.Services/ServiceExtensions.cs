@@ -19,7 +19,10 @@ public static class ServiceExtensions
 		));
 
 		// Register repositories
+		services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 		services.AddScoped<IProjectRepository, ProjectRepository>();
+		services.AddScoped<IPositionRepository, PositionRepository>();
+		services.AddScoped<IResponsibilityRepository, ResponsibilityRepository>();
 
 		// Register services
 		services.AddScoped<IProjectService, ProjectService>();

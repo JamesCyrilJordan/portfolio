@@ -14,10 +14,9 @@ namespace Portfolio.Services.Implementations
 			_repository = repository;
 		}
 
-
 		public async Task<IEnumerable<ProjectDto>> GetAllProjectsAsync()
 		{
-			var projects = await _repository.GetAllProjectsAsync();
+			var projects = await _repository.GetAllAsync();
 			return projects.Select(p => new ProjectDto
 			{
 				Id = p.Id,
@@ -31,7 +30,7 @@ namespace Portfolio.Services.Implementations
 
 		public async Task<ProjectDto?> GetProjectByIdAsync(int id)
 		{
-			var project = await _repository.GetProjectByIdAsync(id);
+			var project = await _repository.GetByIdAsync(id);
 			if (project == null) return null;
 
 			return new ProjectDto
@@ -56,7 +55,7 @@ namespace Portfolio.Services.Implementations
 				TechnologiesUsed = projectDto.TechnologiesUsed
 			};
 
-			await _repository.AddProjectAsync(project);
+			await _repository.AddAsync(project);
 			await _repository.SaveChangesAsync();
 		}
 	}
