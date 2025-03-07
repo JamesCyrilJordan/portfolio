@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<h1>Resume</h1>
-		<div v-for="experience in experiences"
-			:key="experience.id">
+		<div v-for="position in positions"
+			:key="position.id">
 			<h3>job title here</h3>
 			<p>job description here</p>
 		</div>
@@ -20,9 +20,10 @@
 			}
 		},
 		async created() {
-			const response = await axios.get('/api/Project');
-			const experiences = response.data;
-			this.experiences = experiences;
+			const response = await axios.get('/api/Position');
+			console.log(response.data);
+			const Positions = response.data;
+			this.Positions = Positions;
 		}
 	}
 </script>

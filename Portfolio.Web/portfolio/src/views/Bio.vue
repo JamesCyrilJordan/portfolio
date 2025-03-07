@@ -1,6 +1,7 @@
 <template>
-	<h1> Bio page (under construction)</h1>
-
+	<div>
+		<h1> Bio page (under construction)</h1>
+	</div>
 </template>
 
 <script>
