@@ -4,5 +4,6 @@ namespace Portfolio.Data.Repositories
 {
 	public interface IPositionRepository : IBaseRepository<Position>
 	{
+		Task<IEnumerable<Position>> GetAllPositionsAndResponsibilitiesAsync();
 	}
 }

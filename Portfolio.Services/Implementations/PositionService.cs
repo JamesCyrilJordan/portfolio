@@ -13,7 +13,7 @@ namespace Portfolio.Services.Implementations
 		}
 		public async Task<IEnumerable<PositionDto>> GetAllPositionsAsync()
 		{
-			var postitions = await _repo.GetAllAsync();
+			var postitions = await _repo.GetAllPositionsAndResponsibilitiesAsync();
 			return postitions.Select(p => new PositionDto
 			{
 				Id = p.Id,

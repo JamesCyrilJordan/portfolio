@@ -1,4 +1,5 @@
-﻿using Portfolio.Data.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Portfolio.Data.Entities;
 
 namespace Portfolio.Data.Repositories
 {
@@ -6,6 +7,13 @@ namespace Portfolio.Data.Repositories
     {
 		public PositionRepository(PortfolioDbContext context) : base(context)
 		{			
+		}
+
+		public async Task<IEnumerable<Position>> GetAllPositionsAndResponsibilitiesAsync()
+		{
+			return await _context.Positions
+				.Include(p => p.Responsibilities)
+				.ToListAsync();
 		}
 	}
 }
